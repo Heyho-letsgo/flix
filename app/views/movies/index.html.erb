@@ -1,0 +1,8 @@
+<h1>Movies</h1>
+<h2>
+<%= @movies.size%> movies.</h2>
+<ul>
+<% @movies.each do |m| %>
+  <li><strong><%= m.id %> - <%= m.title %></strong>  <%= m.rating %> <%= m.total_gross %> </li>
+<% end %>
+</ul>
