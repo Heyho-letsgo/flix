@@ -1,8 +1,19 @@
 <h1>Movies</h1>
-<h2>
-<%= @movies.size%> movies.</h2>
+<h2> <%= pluralize(@movies.size, 'movie') %>.</h2>
 <ul>
-<% @movies.each do |m| %>
-  <li><strong><%= m.id %> - <%= m.title %></strong>  <%= m.rating %> <%= m.total_gross %> </li>
-<% end %>
+  <% @movies.each do |m| %> <br>
+      <li><strong><%= m.id %> - <%= m.title %></strong> - Mis à jour : <%= m.updated_at %>
+        <br>
+        Description : <br>
+        <%= truncate(m.description, length: 140, separator: ' ') %> <br>
+        Chiffre d'affaire : <%= number_to_currency(m.total_gross, unit: " M€", separator: ",", delimiter: "", format: "%n %u") %><br>
+        Date de sortie le : <%= m.released_on %>
+
+      </li>
+  <% end %>
 </ul>
+
+<%= link_to "Accueil", root_path %>
+
+
+

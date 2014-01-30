@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3572743510">
+    <data-source source="LOCAL" name="Rails flix: development" uuid="d2ddb4c2-2abe-4000-af35-ddae2f63e0a4">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails flix: test" uuid="cad9aeff-c619-4e82-aaf5-8ce7d6f15c8f">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails events: development" uuid="c66a2cbd-0f06-4ae8-baf5-0223166707cc">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../events/db/development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails events: test" uuid="bf726ee5-881a-496a-9363-8d37f471e275">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../events/db/test.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
