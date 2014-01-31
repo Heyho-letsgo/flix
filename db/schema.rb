@@ -14,13 +14,13 @@
 ActiveRecord::Schema.define(version: 20140122084340) do
 
   create_table "movies", force: true do |t|
-    t.string   "title"
-    t.string   "rating"
-    t.decimal  "total_gross"
+    t.string "title"
+    t.string "rating"
+    t.decimal "total_gross"
     t.datetime "created_at"
     t.datetime "updated_at"
-	t.text     "description"
-    t.date     "released_on"
+    t.text "description"
+    t.date "released_on"
   end
 
 end

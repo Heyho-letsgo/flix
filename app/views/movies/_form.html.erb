@@ -1,0 +1,14 @@
+<%= form_for @movie do |f| %>
+    <%= f.label :Titre %><%= f.text_field :title %>
+    <%= f.text_field :rating %> <br>
+
+
+
+
+
+    <%= f.submit %> <%= link_to "Tous les films", movies_path %>
+
+
+
+
+<% end %>

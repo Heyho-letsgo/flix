@@ -1,25 +1,24 @@
-
+<% I18n.locale = :fr %>
 <h1>Movies</h1>
 <h2> <%= pluralize(@movies.size, 'movie') %>.</h2>
 <ul>
   <% @movies.each do |m| %>
 
-      <li><strong><%= link_to m.id, @movie %>
-       <%= link_to m.id, controller: 'movies', action: 'show', id: m.id %>
-        - <%= link_to m.title, controller: 'movies', action: 'show', id: m.id%></strong>
+      <li><strong><%= link_to m.id, m %>
+        <%= link_to m.id, controller: 'movies', action: 'show', id: m.id %>
+        - <%= link_to m.title, controller: 'movies', action: 'show', id: m.id %></strong>
         - Mis à jour : <%= m.updated_at %>
         <br>
         Description : <br>
         <%= truncate(m.description, length: 140, separator: ' ') %> <br>
+        Chiffre d'affaire
+        : <%= number_to_currency(m.total_gross, unit: " M€", separator: ",", delimiter: "", format: "%n %u") %>
 
-
-        Chiffre d'affaire :   <%= format_total_gross(movie)%>
+        <%= format_total_gross(m) %>
 
 
         Date de sortie le : <%= m.released_on %>
-
-
-
+        Date de sortie le :  <%= m.released_on.to_s(:release_date) %>
 
 
       </li>
