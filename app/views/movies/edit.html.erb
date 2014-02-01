@@ -1,0 +1,26 @@
+<h1>Film <%= @movie.title %></h1>
+<%= link_to "Lien vers Api form_for", "http://apidock.com/rails/v3.2.13/ActionView/Helpers/FormHelper/form_for", :target => "_blank" %> |
+<%= link_to "Lien vers text_area", "http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-text_area", :target => "_blank" %> |
+<%= link_to "Lien vers text_field", "http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-text_field", :target => "_blank" %> |
+<%= link_to "Lien vers text_area", "http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html#method-i-text_area", :target => "_blank" %>
+
+<p>created_at : <%= @movie.created_at %>   updated_at : <%= @movie.updated_at %></p><br>
+
+
+<%= form_for @movie do |f| %>
+    <%= f.label :Titre %><%= f.text_field :title %><br>
+    <%= f.label :rating %><%= f.text_field :rating %><br>
+    <%= f.label :total_gross %><%= f.text_field :total_gross %><br>
+    Description <br><%= f.text_area :description, cols: 40, rows: 7  %><br>
+    <%= f.label :released_on %><%= f.text_field :released_on %><br>
+
+
+    <%= f.submit %> |
+    <%= link_to "Tous les films", movies_path %> |
+    <%= link_to "Cancel", movie_path %><br>
+    <br>
+    <%= link_to "Lien vers Apidock link_to ", "http://apidock.com/rails/ActionView/Helpers/UrlHelper/link_to", :target => "_blank" %>
+    
+
+
+<% end %>
