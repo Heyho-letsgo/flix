@@ -1,2 +1,17 @@
 <h1>Film <%= @movie.title %></h1>
-<%= render 'form' %>
+<h2>Show </h2>
+
+<p>title : <%= @movie.title %><br>
+  rating : <%= @movie.rating %><br>
+  total_gross : <%= @movie.total_gross %></p><br>
+<p>created_at : <%= @movie.created_at %><br>
+  updated_at : <%= @movie.updated_at %></p><br>
+<p>description : <%= @movie.description %></p><br>
+<p>released_on : <%= @movie.released_on %></p><br>
+
+
+
+
+<%= link_to "Tous les films", movies_path %>
+<%= link_to "Editer", edit_movie_path %>
+
